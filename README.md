@@ -1,7 +1,5 @@
 # DSI-Cohort8-ML11
 # TTC Subway Delay Prediction  
-**Project Deadline: Sunday, March 8**
-
 ---
 
 ## Project Overview
