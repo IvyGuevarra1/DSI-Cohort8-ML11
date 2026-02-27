@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This project analyzes TTC subway delay data (2022–2025) to predict delay duration and identify high-delay incidents.  
+This project analyzes TTC subway delay data (2021–2025) to predict the factors causing delay and high delay incident >5m.  
 
 Our goal is to improve transit reliability by building predictive models that support TTC operations, service planning, and data-driven decision-making.
 
@@ -14,7 +14,7 @@ Our goal is to improve transit reliability by building predictive models that su
 
 Transit delays impact rider satisfaction, operational efficiency, and city mobility.
 
-By predicting delay duration and identifying high-delay incidents, this project aims to:
+By predicting factors causing delay and identifying high-delay incidents, this project aims to:
 
 - Improve operational response planning
 - Identify high-risk stations, times, and delay causes
@@ -25,30 +25,32 @@ By predicting delay duration and identifying high-delay incidents, this project 
 ## Dataset
 
 **Dataset:** TTC Subway Delay Dataset  
-**Time Range:** 2022 – 2025  
+**Time Range:** 2021 – 2025  
 
 ### Key Variables
 - `Min Delay` (Delay duration in minutes)
-- Time (Date, Hour)
+- Time as category (i.e Rush hour AM, PM) 
 - Station
 - Line
 - Direction
-- Cause of delay
+- Month, Year, Season
+- Remove: Vehicle number
+- Target: Cause of delay
 
 ---
 
 ## Business Questions
 
-1. Can we accurately predict the delay duration (`Min Delay`)?
-2. Can we classify whether a delay will exceed 10 minutes (high-delay incident)?
-3. What factors contribute most to significant delays?
+1. What factors contribute most to significant delays?
+2. Can we classify whether a delay will exceed 5 minutes (high-delay incident)?
+
 
 ---
 
 ## Analysis Approach
 
 ### Classification (Primary ML Focus)
-**Objective:** Predict high-delay incidents (>10 minutes)
+**Objective:** Predict high-delay incidents (>5 minutes)
 
 - Binary target creation
 - Address class imbalance
